@@ -25,7 +25,7 @@ function App() {
           <p>
             From the moment I met you, my world became brighter. Every day with
             you is a blessing, and I can’t imagine my life without you. Will you
-            spend forever with me?
+            spend 2nd Oct with me ?
           </p>
           <button onClick={handleProposalClick}>Click for a surprise</button>
         </div>
@@ -34,7 +34,7 @@ function App() {
       {showSurprise && !response && (
         <div className="surprise">
           <h2>You complete me ❤️</h2>
-          <h3>Will you marry me?</h3>
+          <h3>Date pe chaloge?</h3>
           <button onClick={handleYesClick}>YES!</button>
           <button onClick={handleNoClick}>Maybe later?</button>
         </div>
