@@ -50,3 +50,15 @@ h1, h2, h3 {
   font-weight: bold;
   color: #FF647F;
 }
+
+.image-placeholder {
+  margin-top: 20px;
+}
+
+.image-placeholder img {
+  width: auto;      /* Don't limit width */
+  height: 100vh;    /* Occupy full vertical height */
+  object-fit: cover; /* Ensure the image scales correctly */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

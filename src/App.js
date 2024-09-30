@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import './App.css';
 
 function App() {
   const [showSurprise, setShowSurprise] = useState(false);
@@ -10,11 +10,11 @@ function App() {
   };
 
   const handleYesClick = () => {
-    setResponse("She said YES! 💍🎉");
+    setResponse("yes");
   };
 
   const handleNoClick = () => {
-    setResponse("That’s okay, love is patient ❤️");
+    setResponse("no");
   };
 
   return (
@@ -25,7 +25,7 @@ function App() {
           <p>
             From the moment I met you, my world became brighter. Every day with
             you is a blessing, and I can’t imagine my life without you. Will you
-            spend 2nd October with me?
+            spend forever with me?
           </p>
           <button onClick={handleProposalClick}>Click for a surprise</button>
         </div>
@@ -34,15 +34,33 @@ function App() {
       {showSurprise && !response && (
         <div className="surprise">
           <h2>You complete me ❤️</h2>
-          <h3>Date pe chalo?</h3>
+          <h3>Will you marry me?</h3>
           <button onClick={handleYesClick}>YES!</button>
           <button onClick={handleNoClick}>Maybe later?</button>
         </div>
       )}
 
-      {response && (
+      {response === "yes" && (
         <div className="response">
-          <h2>{response}</h2>
+          <h2>She said YES! 💍🎉</h2>
+          <div className="image-placeholder">
+            <img
+              src="../yes.jpg"
+              alt="Placeholder for your engagement image"
+            />
+          </div>
+        </div>
+      )}
+
+      {response === "no" && (
+        <div className="response">
+          <h2>That’s okay, love is patient ❤️</h2>
+          <div className="image-placeholder">
+            <video
+              src="../no.mp4"
+              alt="Placeholder for patient love image"
+            />
+          </div>
         </div>
       )}
     </div>
